@@ -1,0 +1,14 @@
+artifact_uri: file:///Users/dm/Developer/MIntel/mlruns/807201623091509994/f06fb87ce8a24e5cb542fd4d9d6fe69b/artifacts
+end_time: 1771188333771
+entry_point_name: ''
+experiment_id: '807201623091509994'
+lifecycle_stage: active
+run_id: f06fb87ce8a24e5cb542fd4d9d6fe69b
+run_name: masked-asp-684
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1771188331652
+status: 3
+tags: []
+user_id: dm

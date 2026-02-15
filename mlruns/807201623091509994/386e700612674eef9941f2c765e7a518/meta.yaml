@@ -1,0 +1,14 @@
+artifact_uri: file:///Users/dm/Developer/MIntel/mlruns/807201623091509994/386e700612674eef9941f2c765e7a518/artifacts
+end_time: 1771188300988
+entry_point_name: ''
+experiment_id: '807201623091509994'
+lifecycle_stage: active
+run_id: 386e700612674eef9941f2c765e7a518
+run_name: orderly-mare-748
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1771188298378
+status: 4
+tags: []
+user_id: dm

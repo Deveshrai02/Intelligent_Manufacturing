@@ -1,0 +1,14 @@
+artifact_uri: file:///Users/dm/Developer/MIntel/mlruns/807201623091509994/4e2c185b8016466984f0dcd35e534834/artifacts
+end_time: 1771188257272
+entry_point_name: ''
+experiment_id: '807201623091509994'
+lifecycle_stage: active
+run_id: 4e2c185b8016466984f0dcd35e534834
+run_name: nimble-bear-809
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1771188257255
+status: 4
+tags: []
+user_id: dm

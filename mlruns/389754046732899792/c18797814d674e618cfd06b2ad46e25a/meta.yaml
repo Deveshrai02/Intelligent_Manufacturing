@@ -1,0 +1,14 @@
+artifact_uri: file:///Users/dm/Developer/MIntel/mlruns/389754046732899792/c18797814d674e618cfd06b2ad46e25a/artifacts
+end_time: 1771190531238
+entry_point_name: ''
+experiment_id: '389754046732899792'
+lifecycle_stage: active
+run_id: c18797814d674e618cfd06b2ad46e25a
+run_name: upset-dove-769
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1771190529759
+status: 3
+tags: []
+user_id: dm

@@ -1,0 +1,14 @@
+artifact_uri: file:///Users/dm/Developer/MIntel/mlruns/807201623091509994/a4dd3c1c40e14aa996d1dc1984715e56/artifacts
+end_time: 1771188231831
+entry_point_name: ''
+experiment_id: '807201623091509994'
+lifecycle_stage: active
+run_id: a4dd3c1c40e14aa996d1dc1984715e56
+run_name: caring-doe-461
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1771188231826
+status: 4
+tags: []
+user_id: dm

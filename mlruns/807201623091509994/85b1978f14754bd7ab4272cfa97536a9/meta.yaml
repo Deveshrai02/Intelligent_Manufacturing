@@ -1,0 +1,14 @@
+artifact_uri: file:///Users/dm/Developer/MIntel/mlruns/807201623091509994/85b1978f14754bd7ab4272cfa97536a9/artifacts
+end_time: 1771190509353
+entry_point_name: ''
+experiment_id: '807201623091509994'
+lifecycle_stage: active
+run_id: 85b1978f14754bd7ab4272cfa97536a9
+run_name: thoughtful-kite-339
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1771190507100
+status: 3
+tags: []
+user_id: dm

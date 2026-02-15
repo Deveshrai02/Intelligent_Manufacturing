@@ -1,0 +1,20 @@
+aliases: []
+creation_timestamp: 1771190531226
+current_stage: Production
+deployment_job_state: null
+description: null
+last_updated_timestamp: 1771190531235
+metrics: []
+model_id: m-8ff55c92217743bca841c0ef6180bcd4
+name: AnomalyModel
+params:
+  contamination: '0.05'
+  model_type: IsolationForest
+run_id: c18797814d674e618cfd06b2ad46e25a
+run_link: null
+source: models:/m-8ff55c92217743bca841c0ef6180bcd4
+status: READY
+status_message: null
+storage_location: file:///Users/dm/Developer/MIntel/mlruns/389754046732899792/models/m-8ff55c92217743bca841c0ef6180bcd4/artifacts
+user_id: null
+version: 1
