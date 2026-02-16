@@ -1,0 +1,14 @@
+artifact_uri: file:///Users/dm/Developer/MIntel/mlruns/807201623091509994/742e6f8898e340d6bc3648c7bf582a3d/artifacts
+end_time: 1771282395308
+entry_point_name: ''
+experiment_id: '807201623091509994'
+lifecycle_stage: active
+run_id: 742e6f8898e340d6bc3648c7bf582a3d
+run_name: learned-bug-587
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1771282392865
+status: 3
+tags: []
+user_id: dm

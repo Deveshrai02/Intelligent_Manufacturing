@@ -1,0 +1,14 @@
+artifact_uri: file:///Users/dm/Developer/MIntel/mlruns/807201623091509994/2793de3041ba48bc9f1b93dc5e6af43d/artifacts
+end_time: 1771282502363
+entry_point_name: ''
+experiment_id: '807201623091509994'
+lifecycle_stage: active
+run_id: 2793de3041ba48bc9f1b93dc5e6af43d
+run_name: defiant-wolf-387
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1771282499955
+status: 3
+tags: []
+user_id: dm

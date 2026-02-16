@@ -25,7 +25,7 @@ def train():
 
     df = load_feature_data().dropna()
 
-    X = df.drop(["vehicle_id", "warranty_flag", "feature_snapshot_timestamp"], axis=1)
+    X = df.drop(["vehicle_id", "warranty_flag", "feature_snapshot_timestamp" , "data_version"], axis=1)
     y = df["warranty_flag"]
 
     yj_cols = []

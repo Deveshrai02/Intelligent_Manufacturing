@@ -1,8 +1,8 @@
 aliases:
-  production: '3'
+  production: '4'
 creation_timestamp: 1771190531225
 deployment_job_id: null
 deployment_job_state: null
 description: null
-last_updated_timestamp: 1771280055609
+last_updated_timestamp: 1771282514954
 name: AnomalyModel

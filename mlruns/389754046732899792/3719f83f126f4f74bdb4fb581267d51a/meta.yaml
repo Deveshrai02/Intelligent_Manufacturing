@@ -1,0 +1,14 @@
+artifact_uri: file:///Users/dm/Developer/MIntel/mlruns/389754046732899792/3719f83f126f4f74bdb4fb581267d51a/artifacts
+end_time: 1771282514958
+entry_point_name: ''
+experiment_id: '389754046732899792'
+lifecycle_stage: active
+run_id: 3719f83f126f4f74bdb4fb581267d51a
+run_name: orderly-doe-604
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1771282513357
+status: 3
+tags: []
+user_id: dm
