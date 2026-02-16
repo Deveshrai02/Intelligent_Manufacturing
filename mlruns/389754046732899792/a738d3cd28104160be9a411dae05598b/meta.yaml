@@ -1,0 +1,14 @@
+artifact_uri: file:///Users/dm/Developer/MIntel/mlruns/389754046732899792/a738d3cd28104160be9a411dae05598b/artifacts
+end_time: 1771280055612
+entry_point_name: ''
+experiment_id: '389754046732899792'
+lifecycle_stage: active
+run_id: a738d3cd28104160be9a411dae05598b
+run_name: silent-dog-683
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1771280053902
+status: 3
+tags: []
+user_id: dm

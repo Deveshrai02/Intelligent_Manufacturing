@@ -1,0 +1,10 @@
+artifact_location: file:///Users/dm/Developer/MIntel/mlruns/807201623091509994/models/m-42cccb2132fa494196694d89b2c83b3a/artifacts
+creation_timestamp: 1771278119340
+experiment_id: '807201623091509994'
+last_updated_timestamp: 1771278120804
+model_id: m-42cccb2132fa494196694d89b2c83b3a
+model_type: null
+name: model
+source_run_id: 7718fbc9d7a14172b08333cbc00a4d64
+status: 2
+status_message: null

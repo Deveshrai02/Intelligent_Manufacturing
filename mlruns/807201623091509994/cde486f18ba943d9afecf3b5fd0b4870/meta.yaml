@@ -1,0 +1,14 @@
+artifact_uri: file:///Users/dm/Developer/MIntel/mlruns/807201623091509994/cde486f18ba943d9afecf3b5fd0b4870/artifacts
+end_time: 1771193689515
+entry_point_name: ''
+experiment_id: '807201623091509994'
+lifecycle_stage: active
+run_id: cde486f18ba943d9afecf3b5fd0b4870
+run_name: melodic-boar-690
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1771193687138
+status: 3
+tags: []
+user_id: dm

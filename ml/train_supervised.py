@@ -13,6 +13,7 @@ from sklearn.pipeline import Pipeline
 from ml.utils import load_feature_data
 from pandas.api.types import is_numeric_dtype
 import numpy as np
+from mlflow.models import infer_signature
 
 MODEL_NAME = "WarrantyModel"
 
@@ -66,14 +67,22 @@ def train():
     
     with mlflow.start_run() as run:
 
+        # Training hyperparameters
         n_estimators = 100
+        random_state = 42
+        max_samples = 0.5
+        max_features = 0.75
+        max_depth = 15
         class_weight = "balanced"
 
         # Build classifier
         clf = RandomForestClassifier(
             n_estimators=n_estimators,
+            random_state=random_state,
+            max_samples=max_samples,
+            max_features=max_features,
+            max_depth=max_depth,
             class_weight=class_weight,
-            random_state=42,
         )
 
         # Preprocessor + classifier pipeline so we can fit/predict and log the
@@ -109,33 +118,45 @@ def train():
         # Log parameters
         mlflow.log_param("n_estimators", n_estimators)
         mlflow.log_param("class_weight", class_weight)
+        mlflow.log_param("max_samples", max_samples)
+        mlflow.log_param("max_features", max_features)
+        mlflow.log_param("max_depth", max_depth)
+        
 
         # Log metrics
         mlflow.log_metric("roc_auc", auc)
         mlflow.log_metric("precision", precision)
         mlflow.log_metric("recall", recall)
 
+        signature = infer_signature(X_train, full_pipeline.predict(X_train))
+
         # Register model
         mlflow.sklearn.log_model(
             full_pipeline,
             artifact_path="model",
             registered_model_name=MODEL_NAME,
+            signature=signature,
+            input_example=X_train.head(5)
         )
 
         print(f"ROC AUC: {auc}")
 
         client = MlflowClient()
-        latest_version = client.get_latest_versions(MODEL_NAME)[-1]
+        # Get all versions
+        versions = client.search_model_versions(f"name='{MODEL_NAME}'")
+
+        # Get highest version number
+        latest_version = max(versions, key=lambda v: int(v.version))
 
         try:
             # Note: transitioning stages may raise errors on some MLflow setups
             # (file store YAML serialization). Catch and warn rather than fail.
-            client.transition_model_version_stage(
-                name=MODEL_NAME,
-                version=latest_version.version,
-                stage="Production",
-            )
-            print(f"Model version {latest_version.version} promoted to Production.")
+           client.set_registered_model_alias(
+                    name=MODEL_NAME,
+                    alias="production",
+                    version=latest_version.version
+                )
+           print(f"Model version {latest_version.version} promoted to Production.")
         except Exception as e:
             print("Warning: could not transition model version stage:", e)
             print(f"Model version {latest_version.version} registered (no stage transition).")

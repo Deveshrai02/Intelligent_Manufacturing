@@ -1,0 +1,14 @@
+artifact_uri: file:///Users/dm/Developer/MIntel/mlruns/389754046732899792/696bbd533a3842a0a7e5e55f8ce922d9/artifacts
+end_time: 1771278172939
+entry_point_name: ''
+experiment_id: '389754046732899792'
+lifecycle_stage: active
+run_id: 696bbd533a3842a0a7e5e55f8ce922d9
+run_name: secretive-bear-453
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1771278171383
+status: 4
+tags: []
+user_id: dm

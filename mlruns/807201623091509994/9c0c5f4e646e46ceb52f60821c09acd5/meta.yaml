@@ -1,0 +1,14 @@
+artifact_uri: file:///Users/dm/Developer/MIntel/mlruns/807201623091509994/9c0c5f4e646e46ceb52f60821c09acd5/artifacts
+end_time: 1771192983723
+entry_point_name: ''
+experiment_id: '807201623091509994'
+lifecycle_stage: active
+run_id: 9c0c5f4e646e46ceb52f60821c09acd5
+run_name: powerful-ant-696
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1771192983705
+status: 4
+tags: []
+user_id: dm

@@ -1,0 +1,14 @@
+artifact_uri: file:///Users/dm/Developer/MIntel/mlruns/807201623091509994/fbb535fbe483422193ccf846007aa9a8/artifacts
+end_time: 1771280071701
+entry_point_name: ''
+experiment_id: '807201623091509994'
+lifecycle_stage: active
+run_id: fbb535fbe483422193ccf846007aa9a8
+run_name: bald-moose-374
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1771280069309
+status: 3
+tags: []
+user_id: dm

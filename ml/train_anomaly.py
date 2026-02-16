@@ -9,6 +9,7 @@ import numpy as np
 from sklearn.compose import ColumnTransformer
 from sklearn.preprocessing import PowerTransformer, FunctionTransformer, OneHotEncoder
 from pandas.api.types import is_numeric_dtype
+from mlflow.models import infer_signature
 
 MODEL_NAME = "AnomalyModel"
 
@@ -87,21 +88,30 @@ def train():
         mlflow.log_param("contamination", contamination)
         mlflow.log_param("model_type", "IsolationForest")
 
+        signature = infer_signature(X, pipeline.predict(X))
+
         mlflow.sklearn.log_model(
             pipeline,
             artifact_path="model",
-            registered_model_name=MODEL_NAME
+            registered_model_name=MODEL_NAME,
+            signature=signature,
+            input_example=X.head(5)
         )
 
         client = MlflowClient()
-        latest_version = client.get_latest_versions(MODEL_NAME)[-1]
 
-        client.transition_model_version_stage(
+        # Get all versions
+        versions = client.search_model_versions(f"name='{MODEL_NAME}'")
+
+        #  Get highest version number
+        latest_version = max(versions, key=lambda v: int(v.version))
+
+        # Assign alias
+        client.set_registered_model_alias(
             name=MODEL_NAME,
-            version=latest_version.version,
-            stage="Production"
+            alias="production",
+            version=latest_version.version
         )
-
         print(f"Anomaly model version {latest_version.version} promoted to Production.")
 
 

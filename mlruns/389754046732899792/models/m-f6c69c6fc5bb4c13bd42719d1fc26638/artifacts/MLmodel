@@ -1,0 +1,39 @@
+artifact_path: file:///Users/dm/Developer/MIntel/mlruns/389754046732899792/models/m-f6c69c6fc5bb4c13bd42719d1fc26638/artifacts
+flavors:
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.pkl
+    predict_fn: predict
+    python_version: 3.9.6
+  sklearn:
+    code: null
+    pickled_model: model.pkl
+    serialization_format: cloudpickle
+    sklearn_version: 1.6.1
+is_signature_from_type_hint: false
+mlflow_version: 3.1.4
+model_id: m-f6c69c6fc5bb4c13bd42719d1fc26638
+model_size_bytes: 1059752
+model_uuid: m-f6c69c6fc5bb4c13bd42719d1fc26638
+prompts: null
+run_id: a738d3cd28104160be9a411dae05598b
+saved_input_example_info:
+  artifact_path: input_example.json
+  pandas_orient: split
+  serving_input_path: serving_input_example.json
+  type: dataframe
+signature:
+  inputs: '[{"type": "long", "name": "total_error_count", "required": true}, {"type":
+    "double", "name": "avg_cycle_time", "required": true}, {"type": "double", "name":
+    "cycle_time_variance", "required": true}, {"type": "double", "name": "rework_ratio",
+    "required": true}, {"type": "double", "name": "vendor_defect_ratio", "required":
+    true}, {"type": "double", "name": "avg_torque", "required": true}, {"type": "double",
+    "name": "torque_deviation", "required": true}, {"type": "string", "name": "data_version",
+    "required": true}]'
+  outputs: '[{"type": "tensor", "tensor-spec": {"dtype": "int64", "shape": [-1]}}]'
+  params: null
+type_hint_from_example: false
+utc_time_created: '2026-02-16 22:14:14.062464'

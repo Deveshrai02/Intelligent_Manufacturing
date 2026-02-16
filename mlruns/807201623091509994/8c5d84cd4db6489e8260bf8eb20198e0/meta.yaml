@@ -1,0 +1,14 @@
+artifact_uri: file:///Users/dm/Developer/MIntel/mlruns/807201623091509994/8c5d84cd4db6489e8260bf8eb20198e0/artifacts
+end_time: 1771193082745
+entry_point_name: ''
+experiment_id: '807201623091509994'
+lifecycle_stage: active
+run_id: 8c5d84cd4db6489e8260bf8eb20198e0
+run_name: lyrical-bird-205
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1771193082728
+status: 4
+tags: []
+user_id: dm
