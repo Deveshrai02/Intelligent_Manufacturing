@@ -1,0 +1,15 @@
+FROM python:3.9
+
+WORKDIR /mlflow
+
+RUN pip install mlflow pymysql
+
+EXPOSE 5000
+
+CMD ["mlflow", "server",
+     "--host", "0.0.0.0",
+     "--port", "5000",
+     "--backend-store-uri",  "mysql+pymysql://root:@localhost/AIDB",
+     "--default-artifact-root", "/mlruns"]
+
+    
