@@ -61,8 +61,16 @@ def train():
 
 
     X_train, X_test, y_train, y_test = train_test_split(
-        X, y, test_size=0.2, random_state=42
-    )
+        X, y, test_size=0.2, random_state=42)
+
+    baseline_stats = {}
+
+    for col in X_train.columns:
+        baseline_stats[col] = {
+        "mean": float(X_train[col].mean()),
+        "std": float(X_train[col].std())
+    }
+    
 
     
     with mlflow.start_run() as run:
