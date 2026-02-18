@@ -31,7 +31,7 @@ def compute_live_stats():
 
     return live_stats
 
-def detect_drift(threshold=0.3):
+def detect_drift(threshold_mean=0.3, threshold_std=0.5):
 
     live_stats = compute_live_stats()
 
@@ -49,11 +49,13 @@ def detect_drift(threshold=0.3):
         if feature in live_stats:
             baseline_mean = row["mean_value"]
             live_mean = live_stats[feature]["mean"]
+            baseline_std = row["std_value"]
+            live_std = live_stats[feature]["std"]
 
-            percent_change = abs(live_mean - baseline_mean) / (abs(baseline_mean) + 1e-6)
+            mean_change = abs(live_mean - baseline_mean) / (abs(baseline_mean) + 1e-6)
+            std_change = abs(live_std - baseline_std) / (abs(baseline_std) + 1e-6)
 
-            if percent_change > threshold:
-                print(f"Drift detected in {feature}")
+            if mean_change > threshold_mean or std_change > threshold_std:
                 drift_detected = True
 
     return drift_detected
